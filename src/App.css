@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgb(178, 223, 241);
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.play-again-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}

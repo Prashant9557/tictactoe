@@ -1,0 +1,55 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr); /* sets the number of columns in the grid to the value of the gridsize variable*/
+  gap: 0px;
+  margin: 20px auto;
+  width: 90vw;
+  max-width: 500px;
+  background: goldenrod;
+}
+
+.cell {
+  width: 90%;
+  padding-top: 80%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #000;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0px 0px 2px 7px;
+  padding-bottom: 15px;
+  padding-right: 5px;  
+}
+
+.cell::after {
+  content: attr(data-value);/* inserts the value of the data-value attributes after the .cell elements */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (max-width: 600px)/* define styles for screen width up to 
+600px */ {
+  .cell {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+/*Defines styles for screen widths between 601 and 1200 pixels. */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .cell {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
